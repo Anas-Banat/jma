@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
-import { validateEmail } from "@/utils/validateEmail";
-import Loader from "@/components/Common/Loader";
+import { validateEmail } from "../../../utils/validateEmail";
+import Loader from "../../../components/Common/Loader";
 
 const MagicLink = () => {
   const [email, setEmail] = useState("");
