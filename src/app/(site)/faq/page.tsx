@@ -1,5 +1,5 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import Faq from "@/components/Faq";
+import Breadcrumb from "../../../components/Common/Breadcrumb";
+import Faq from "../../../components/Faq";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
