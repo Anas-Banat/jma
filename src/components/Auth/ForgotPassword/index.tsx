@@ -1,8 +1,5 @@
 "use client";
 import React from "react";
-import { useState } from "react";
-import toast from "react-hot-toast";
-import axios from "axios";
 import Loader from "../../../components/Common/Loader";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,42 +7,6 @@ import logo_dark from '../../../../public/images/logo/jma-removebg.png';
 import logo_light from '../../../../public/images/logo/jma_white_logo.png';
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState("");
-  const [loader, setLoader] = useState(false);
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-
-    if (!email) {
-      toast.error("Please enter your email address.");
-
-      return;
-    }
-
-    setLoader(true);
-
-    try {
-      const res = await axios.post("/api/forgot-password/reset", {
-        email: email.toLowerCase(),
-      });
-
-      if (res.status === 404) {
-        toast.error("User not found.");
-        return;
-      }
-
-      if (res.status === 200) {
-        toast.success(res.data);
-        setEmail("");
-      }
-
-      setEmail("");
-      setLoader(false);
-    } catch (error: any) {
-      toast.error(error?.response.data);
-      setLoader(false);
-    }
-  };
 
   return (
     <section className="bg-[#F4F7FF] py-14 dark:bg-dark lg:py-20">
@@ -75,7 +36,7 @@ const ForgotPassword = () => {
                 </Link>
               </div>
 
-              <form onSubmit={handleSubmit}>
+              <form >
                 <div className="mb-[22px]">
                 <label
                     className="flex w-full rounded-md bg-transparent px-5 py-06 h-3 text-base text-dark outline-none transition dark:text-white"
@@ -88,8 +49,6 @@ const ForgotPassword = () => {
                     type="email"
                     placeholder="Email"
                     name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     required
                     className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
                   />
@@ -99,7 +58,7 @@ const ForgotPassword = () => {
                     type="submit"
                     className="flex w-full cursor-pointer items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
                   >
-                    Send Email {loader && <Loader />}
+                    Send Email
                   </button>
                 </div>
               </form>

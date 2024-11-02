@@ -1,8 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
 import Loader from "../../../components/Common/Loader";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,74 +7,6 @@ import logo from '../../../../public/images/logo/jma-removebg.png';
 
 
 const ResetPassword = ({ token }: { token: string }) => {
-  const [data, setData] = useState({
-    newPassword: "",
-    ReNewPassword: "",
-  });
-  const [loader, setLoader] = useState(false);
-
-  const [user, setUser] = useState({
-    email: "",
-  });
-
-  const router = useRouter();
-
-  useEffect(() => {
-    const verifyToken = async () => {
-      try {
-        const res = await axios.post(`/api/forgot-password/verify-token`, {
-          token,
-        });
-
-        if (res.status === 200) {
-          setUser({
-            email: res.data.email,
-          });
-        }
-      } catch (error: any) {
-        toast.error(error?.response?.data);
-        router.push("/forgot-password");
-      }
-    };
-
-    verifyToken();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoader(true);
-
-    if (data.newPassword === "") {
-      toast.error("Please enter your password.");
-      return;
-    }
-
-    try {
-      const res = await axios.post(`/api/forgot-password/update`, {
-        email: user?.email,
-        password: data.newPassword,
-      });
-
-      if (res.status === 200) {
-        toast.success(res.data);
-        setData({ newPassword: "", ReNewPassword: "" });
-        router.push("/signin");
-      }
-
-      setLoader(false);
-    } catch (error: any) {
-      toast.error(error.response.data);
-      setLoader(false);
-    }
-  };
 
   return (
     <section className="bg-[#F4F7FF] py-14 dark:bg-dark lg:py-20">
@@ -107,14 +36,12 @@ const ResetPassword = ({ token }: { token: string }) => {
                 </Link>
               </div>
 
-              <form onSubmit={handleSubmit}>
+              <form >
                 <div className="mb-[22px]">
                   <input
                     type="text"
                     placeholder="New password"
                     name="newPassword"
-                    value={data?.newPassword}
-                    onChange={handleChange}
                     required
                     className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
                   />
@@ -125,8 +52,6 @@ const ResetPassword = ({ token }: { token: string }) => {
                     type="text"
                     placeholder="New password"
                     name="newPassword"
-                    value={data?.newPassword}
-                    onChange={handleChange}
                     required
                     className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
                   />
@@ -136,7 +61,7 @@ const ResetPassword = ({ token }: { token: string }) => {
                     type="submit"
                     className="flex w-full cursor-pointer items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
                   >
-                    Save Password {loader && <Loader />}
+                    Save Password
                   </button>
                 </div>
               </form>

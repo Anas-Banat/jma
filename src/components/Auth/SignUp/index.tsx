@@ -1,48 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
 import SocialSignIn from "../SocialSignIn";
-import SwitchOption from "../SwitchOption";
-import { useState } from "react";
-import MagicLink from "../MagicLink";
-import Loader from "../../../components/Common/Loader";
 import logo_dark from '../../../../public/images/logo/jma-removebg.png';
 import logo_light from '../../../../public/images/logo/jma_white_logo.png';
 
 
 const SignUp = () => {
-  const router = useRouter();
-  const [isPassword, setIsPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-
-    setLoading(true);
-    const data = new FormData(e.currentTarget);
-    const value = Object.fromEntries(data.entries());
-    const finalData = { ...value };
-
-    fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(finalData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast.success("Successfully registered");
-        setLoading(false);
-        router.push("/signin");
-      })
-      .catch((err) => {
-        toast.error(err.message);
-        setLoading(false);
-      });
-  };
+  
 
   return (
     <section className="bg-[#F4F7FF] py-14 dark:bg-dark lg:py-[90px]">
@@ -81,13 +46,7 @@ const SignUp = () => {
                 </span>
               </span>
 
-              <SwitchOption
-                isPassword={isPassword}
-                setIsPassword={setIsPassword}
-              />
-
-              {isPassword ? (
-                <form onSubmit={handleSubmit}>
+                <form >
                   <div className="mb-[22px]">
                     <input
                       type="text"
@@ -120,13 +79,11 @@ const SignUp = () => {
                       type="submit"
                       className="flex w-full cursor-pointer items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
                     >
-                      Sign Up {loading && <Loader />}
+                      Sign Up 
                     </button>
                   </div>
                 </form>
-              ) : (
-                <MagicLink />
-              )}
+
 
               <p className="text-body-secondary mb-4 text-base">
                 By creating an account you are agree with our{" "}
