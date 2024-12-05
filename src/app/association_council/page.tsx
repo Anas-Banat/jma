@@ -1,13 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+
+import { SubTitle, Parag } from "../../components/Other/Other";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
+import Team from "../../components/Team";
 
 
 const AssociationCouncil = () => {
-  const { lang, language } = useLanguage();
+  const { language } = useLanguage();
 
 
   return (
@@ -19,36 +20,16 @@ const AssociationCouncil = () => {
         <div className="wow fadeInUp" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4">
-              <div className="w-full ">
-                <Image
-                  src="/images/blog/bannder-ad.png"
-                  alt="About Association Council"
-                  width={2000}
-                  height={2000}
-                  className="h-[400px] w-full object-cover object-center"
-                />
-              </div>
               <div className="my-12  lg:mb-0">
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                  Brilliant Toolkit to Build Next.js SaaS Websites.
-                </h2>
-                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel discussions and roundtables led by subject
-                  matter experts.
-                  <br /> <br />
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel.
-                </p>
-
-                <Link
-                  href="/#"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
-                >
-                  Read More
-                </Link>
+                <SubTitle
+                  titleAr="نبذة عامة عن مجلس النقابة:"
+                  titleEn="General Overview of the Association Council:"
+                />
+                <Parag
+                  textAr="يُعد مجلس نقابة الأطباء الأردنية الجهة المسؤولة عن قيادة وتنظيم شؤون المهنة في المملكة. يتألف المجلس من نخبة من الأطباء المنتخبين لتمثيل زملائهم، ويهدف إلى تعزيز مكانة مهنة الطب، وحماية حقوق الأطباء، وتحقيق تطلعاتهم المهنية والاجتماعية. يعمل المجلس على تحقيق الشفافية والعدالة، ومواكبة التطورات العلمية والعملية، بما يضمن تقديم أفضل الخدمات الطبية للمجتمع الأردني"
+                  textEn="The Jordan Medical Association Council serves as the governing body responsible for leading and organizing the medical profession's affairs in the Kingdom. The council is composed of a distinguished group of elected physicians representing their peers. Its mission is to enhance the status of the medical profession, safeguard the rights of doctors, and fulfill their professional and social aspirations. The council is committed to transparency, fairness, and keeping pace with scientific and practical advancements to ensure the best medical services for the Jordanian community."
+                />
+                <Team />
               </div>
             </div>
           </div>

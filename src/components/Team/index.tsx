@@ -1,11 +1,8 @@
 "use client";
 
 import { TeamType } from "@/types/team";
-import SectionTitle from "../Common/SectionTitle";
 import SingleTeam from "./SingleTeam";
 import { useLanguage } from "@/context/LanguageContext";
-import ar from "../../../public/locales/ar/common.json";
-import en from "../../../public/locales/en/common.json";
 
 const teamData: TeamType[] = [
   {
@@ -116,18 +113,6 @@ const Team = () => {
       className="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[60px]"
     >
       <div className="container">
-        <div className="mb-[60px]">
-          <SectionTitle
-            title={language === "ar" ? "مجلس النقابة" : "Association Council"}
-            paragraph={language === "ar" ? 
-              "يُعد مجلس نقابة الأطباء الأردنية الجهة المسؤولة عن قيادة وتنظيم شؤون المهنة في المملكة. يتألف المجلس من نخبة من الأطباء المنتخبين لتمثيل زملائهم، ويهدف إلى تعزيز مكانة مهنة الطب، وحماية حقوق الأطباء، وتحقيق تطلعاتهم المهنية والاجتماعية. يعمل المجلس على تحقيق الشفافية والعدالة، ومواكبة التطورات العلمية والعملية، بما يضمن تقديم أفضل الخدمات الطبية للمجتمع الأردني." 
-              : 
-              "The Jordan Medical Association Council serves as the governing body responsible for leading and organizing the medical profession's affairs in the Kingdom. The council is composed of a distinguished group of elected physicians representing their peers. Its mission is to enhance the status of the medical profession, safeguard the rights of doctors, and fulfill their professional and social aspirations. The council is committed to transparency, fairness, and keeping pace with scientific and practical advancements to ensure the best medical services for the Jordanian community."}
-            width="640px"
-            center
-          />
-        </div>
-
         <div className="-mx-4 flex flex-wrap justify-center">
           {teamData.map((team, i) => (
             <SingleTeam key={i} team={team} />

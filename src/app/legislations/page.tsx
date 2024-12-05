@@ -103,7 +103,7 @@ const Legislations = () => {
                 <DownloadFile
                   urlPathAr="/files/legislations/لائحة_الأجور_الطبية_لعام_2021.pdf"
                   urlPathEn="/files/legislations/لائحة_الأجور_الطبية_لعام_2021.pdf"
-                  textAr="لائحة الأجور الطبية لعام 2021.pdf"
+                  textAr="لائحة الأجور الطبية لعام 2021"
                   textEn="Medical Fees List 2021"
                 />
               </div>

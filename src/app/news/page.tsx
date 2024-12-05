@@ -1,22 +1,14 @@
-import About from "../../components/About";
+import Post from "../../components/News/news_post";
 import Breadcrumb from "../../components/Common/Breadcrumb";
-import Team from "../../components/Team";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn more about our company and team.",
-};
 
 
-const AboutPage = () => {
+const News = () => {
   return (
     <main >
       <Breadcrumb pageName="About Us Page" />
-      <About />
-      <Team />
+      <Post />
     </main>
   );
 };
 
-export default AboutPage;
+export default News;

@@ -1,7 +1,7 @@
+"use client";
+
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import ar from "../../../public/locales/ar/common.json";
-import en from "../../../public/locales/en/common.json";
 
 const posts = [
   {
@@ -10,9 +10,8 @@ const posts = [
     href: '#',
     description:
       'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      date: 'Oct 30, 2024',
-      datetime: '2024-10-30',
-    category: { title: 'Marketing', href: '#' },
+    date: 'Oct 30, 2024',
+    datetime: '2024-10-30',
     imageUrl:
     '/images/news/jma103.png',
   },
@@ -24,7 +23,6 @@ const posts = [
       'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'Oct 30, 2024',
     datetime: '2024-10-30',
-    category: { title: 'Marketing', href: '#' },
     imageUrl:
     '/images/blog/blog-02.jpg',
   },
@@ -36,18 +34,13 @@ const posts = [
       'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
       date: 'Oct 30, 2024',
       datetime: '2024-10-30',
-    category: { title: 'Marketing', href: '#' },
     imageUrl:
     '/images/news/health_support.jpg',
   },
 ]
 
-// const getValue = (key: String, language: String) => {
-//   const translations = language === 'ar' ? ar : en;
-//   return translations[key] || key; // Default to the key if translation is missing
-// };
 
-export default function News() {
+export default function Post() {
   const { language } = useLanguage();
 
   return (
@@ -69,18 +62,11 @@ export default function News() {
                   height={400}
                   className="w-full rounded-xl h-[200px]"
                 />
-                
               </div>
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime} className="text-gray-500 dark:text-gray-100">
                   {post.date}
                 </time>
-                <a
-                  href={post.category.href}
-                  className="relative z-10 rounded-full bg-blue-700 text-white hover:bg-blue-600 dark:bg-white/10 dark:hover:bg-white/20 px-3 py-1.5 font-medium  dark:text-white "
-                >
-                  {post.category.title}
-                </a>
               </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg/6 font-semibold text-dark dark:text-white group-hover:text-blue">
