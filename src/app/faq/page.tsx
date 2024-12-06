@@ -1,3 +1,5 @@
+"use client";
+
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import Faq from "../../components/Faq";
 
