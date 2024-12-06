@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import SocialSignIn from "../SocialSignIn";
 import logo_dark from '../../../../public/images/logo/jma-removebg.png';
 import logo_light from '../../../../public/images/logo/jma_white_logo.png';
 
@@ -35,16 +34,6 @@ const Signin = () => {
                   />
                 </Link>
               </div>
-
-              <SocialSignIn />
-
-              <span className="z-1 relative my-8 block text-center">
-                <span className="-z-1 absolute left-0 top-1/2 block h-px w-full bg-stroke dark:bg-dark-3"></span>
-                <span className="text-body-secondary relative z-10 inline-block bg-white px-3 text-base dark:bg-dark-2">
-                  OR
-                </span>
-              </span>
-
               
                 <form onSubmit={(e) => e.preventDefault()}>
                   <div className="mb-[22px]">
@@ -79,12 +68,6 @@ const Signin = () => {
               >
                 Forget Password?
               </Link>
-              <p className="text-body-secondary text-base">
-                Not a member yet?{" "}
-                <Link href="/signup" className="text-primary hover:underline">
-                  Sign Up
-                </Link>
-              </p>
 
               <div>
                 <span className="absolute right-1 top-1">

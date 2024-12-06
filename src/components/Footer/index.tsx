@@ -39,7 +39,7 @@ const Footer = () => {
               <div className="-mx-5 flex items-center">
                 <Link
                   aria-label="social link"
-                  href="/https://www.facebook.com/Jordan.Medical.Association/"
+                  href="https://www.facebook.com/Jordan.Medical.Association/"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -55,7 +55,7 @@ const Footer = () => {
                 </Link>
                 <Link
                   aria-label="social link"
-                  href="/https://x.com/JMA_Amman"
+                  href="https://x.com/JMA_Amman"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -71,7 +71,7 @@ const Footer = () => {
                 </Link>
                 <Link
                   aria-label="social link"
-                  href="/https://www.instagram.com/jordan_medical_association/"
+                  href="https://www.instagram.com/jordan_medical_association/"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -89,7 +89,7 @@ const Footer = () => {
                 </Link>
                 <Link
                   aria-label="social link"
-                  href="/https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/jordan-medical-association"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -182,13 +182,13 @@ const Footer = () => {
               <div className="">
                 <div className="-mx-3 flex items-center justify-center md:justify-start">
                   <Link
-                    href="/#"
+                    href="/privacy_policy"
                     className="px-3 text-sm md:text-base text-gray-7 hover:text-white hover:underline"
                   >
-                    {language === "ar" ? "سياسة الخصوصية" : "Privacy policy"}
+                    {language === "ar" ? "سياسة الخصوصية" : "Privacy Policy"}
                   </Link>
                   <Link
-                    href="/#"
+                    href="/terms_and_conditions"
                     className="px-3 text-sm md:text-base text-gray-7 hover:text-white hover:underline"
                   >
                     {language === "ar" ? "الشروط والأحكام" : "Terms And Conditions"}

@@ -69,10 +69,6 @@ const AssociationGuide = () => {
                   textAr="7-	التعليم الطبي المستمر: يشدد على أهمية التعلم المستمر لمواكبة التطورات الطبية."
                   textEn="7-	Continuous Medical Education: Highlights the necessity of staying updated with advancements in medical science."
                 />
-                <Parag
-                  textAr=" "
-                  textEn=" "
-                />
 
                 <Parag
                   textAr="الدليل يمثل مرجعًا هامًا للأطباء، كما يمكن للمهتمين من أفراد المجتمع الاطلاع عليه لفهم طبيعة المهنة ومتطلباتها."
