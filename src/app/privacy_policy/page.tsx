@@ -4,7 +4,7 @@ import { SubTitle, Parag} from "../../components/Other/Other";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
 
-const privacyPolicy = () => {
+const PrivacyPolicy = () => {
   const { language } = useLanguage();
 
   return (
@@ -50,4 +50,4 @@ const privacyPolicy = () => {
   );
 };
 
-export default privacyPolicy;
+export default PrivacyPolicy;
