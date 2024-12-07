@@ -87,7 +87,7 @@ const TermsAndConditions = () => {
                 />
                 <Parag
                   textAr="3- محاولة التدخل في الخدمة المقدمة لأي مستخدم، أو مستضيف، أو شبكة، بما في ذلك على سبيل المثال وليس الحصر، عن طريق وضع فيروس على الموقع، أو زيادة الحمل عليه، أو إرسال رسائل دعائية إليه، أو إغراقه بالرسائل الإلكترونية، أو محاولة تعطيله."
-                  textEn="3- • Attempting to interfere with the service provided to any user, host or network, including, but not limited to, by placing a virus on the site, increasing the load on it, sending promotional messages to it, flooding it with e-mails, or attempting to disable it."
+                  textEn="3- Attempting to interfere with the service provided to any user, host or network, including, but not limited to, by placing a virus on the site, increasing the load on it, sending promotional messages to it, flooding it with e-mails, or attempting to disable it."
                 />
               </div>
             </div>
