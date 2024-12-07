@@ -248,10 +248,10 @@ const Header = () => {
                   </ul>
                   <div className="flex items-center justify-between mt-8 md:hidden">
                   <Link
-                          href="/signin"
+                          href="/login"
                           className="rounded-lg bg-primary px-2 py-1 text-base font-medium text-white duration-300 ease-in-out  dark:bg-white/10 dark:hover:bg-white/20"
                         >
-                          {language === 'ar' ? "تسجيل الدخول" : 'Sign In'}
+                          {language === 'ar' ? "تسجيل الدخول" : 'Login'}
                         </Link>
                         {/* <Link
                           href="/signup"
@@ -332,7 +332,7 @@ const Header = () => {
                 ) : (
                       <>
                         <Link
-                          href="/signin"
+                          href="/login"
                           className={`rounded-lg mx-3 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
                             sticky
                               ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
@@ -344,7 +344,7 @@ const Header = () => {
                               : "font-medium"
                           }`}
                         >
-                          {language === "en" ? "Sign In" : "تسجيل الدخول"}
+                          {language === "en" ? "Login" : "تسجيل الدخول"}
                         </Link>
                         {/* <Link
                           href="/signup"
