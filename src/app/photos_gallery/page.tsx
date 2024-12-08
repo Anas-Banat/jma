@@ -1,22 +1,21 @@
-import About from "../../components/About";
+"use client";
+
+import Gallery from "../../components/Photos_Gallery/Gallery";
 import Breadcrumb from "../../components/Common/Breadcrumb";
-import Team from "../../components/Team";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn more about our company and team.",
-};
+import { useLanguage } from "@/context/LanguageContext";
 
 
-const AboutPage = () => {
+const GalleryPage = () => {
+  const { language } = useLanguage();
+
   return (
-    <main >
-      <Breadcrumb pageName="About Us Page" />
-      <About />
-      <Team />
+    <main dir={language === "ar" ? "rtl" : "ltr"}>
+      <Breadcrumb 
+        pageName={language === "ar" ? "معرض الصور" : "Photos Gallery"}
+      />
+      <Gallery />
     </main>
   );
 };
 
-export default AboutPage;
+export default GalleryPage;
