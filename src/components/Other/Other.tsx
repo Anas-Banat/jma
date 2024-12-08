@@ -9,11 +9,11 @@ export const SubTitle = ({ titleAr, titleEn }: { titleAr: string, titleEn: strin
     <>
     {language === "ar" 
       ? 
-        <h2 className="mt-10 mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
+        <h2 className="mt-10 mb-5 text-3xl font-bold leading-tight text-primary dark:text-white sm:text-[40px] sm:leading-[1.2]">
           {titleAr}
         </h2>
       :
-        <h2 className="my-10 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
+        <h2 className="my-10 text-3xl font-bold leading-tight text-primary dark:text-white sm:text-[40px] sm:leading-[1.2]">
           {titleEn}
         </h2>
     }
@@ -54,7 +54,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
         <a 
           href={urlPathAr} 
           download
-          className="px-1 mb-5 text-xl font-bold leading-relaxed text-body-color dark:text-dark-6 hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-xl font-bold leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           اضغط هنا
         </a>
@@ -66,7 +66,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
         <a 
           href={urlPathEn}
           download
-          className="px-1 mb-5 text-base font-bold leading-relaxed text-body-color dark:text-dark-6 hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-base font-bold leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           click here
         </a>
@@ -90,7 +90,7 @@ export const DownloadFile = ({ urlPathAr, urlPathEn, textAr, textEn }: { urlPath
         <a 
           href={urlPathAr} 
           download
-          className="px-1 mb-5 text-xl leading-relaxed text-body-color dark:text-dark-6 hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-xl leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           {textAr}
         </a>
@@ -100,7 +100,7 @@ export const DownloadFile = ({ urlPathAr, urlPathEn, textAr, textEn }: { urlPath
         <a 
           href={urlPathEn}
           download
-          className="px-1 mb-5 text-base leading-relaxed text-body-color dark:text-dark-6 hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-base leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           {textEn}
         </a>

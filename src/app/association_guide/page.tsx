@@ -76,8 +76,8 @@ const AssociationGuide = () => {
                 />
 
                 <ClickHere
-                  urlPathAr="/files/test.pdf"
-                  urlPathEn="/files/test.pdf"
+                  urlPathAr="/files/guide/Association_Guide.pdf"
+                  urlPathEn="/files/guide/Association_Guide.pdf"
                 />
               </div>
             </div>
