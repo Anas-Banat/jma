@@ -54,7 +54,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
         <a 
           href={urlPathAr} 
           download
-          className="px-1 mb-5 text-xl font-bold leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-xl font-bold underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           اضغط هنا
         </a>
@@ -66,7 +66,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
         <a 
           href={urlPathEn}
           download
-          className="px-1 mb-5 text-base font-bold leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-base font-bold underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           click here
         </a>
@@ -90,7 +90,7 @@ export const DownloadFile = ({ urlPathAr, urlPathEn, textAr, textEn }: { urlPath
         <a 
           href={urlPathAr} 
           download
-          className="px-1 mb-5 text-xl leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-xl underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           {textAr}
         </a>
@@ -100,7 +100,7 @@ export const DownloadFile = ({ urlPathAr, urlPathEn, textAr, textEn }: { urlPath
         <a 
           href={urlPathEn}
           download
-          className="px-1 mb-5 text-base leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-base underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
         >
           {textEn}
         </a>
