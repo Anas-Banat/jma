@@ -11,6 +11,7 @@ import Services from "../components/Services";
 import About_Conferences from "../components/About_Conferences";
 import Funds from "../components/Funds";
 import { useLanguage } from "@/context/LanguageContext";
+import RegistrationDoctors from "./registration_doctors/page";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <News />
+      <RegistrationDoctors />
       <About_Conferences />
       <Funds />
       <Services />

@@ -1,15 +1,20 @@
-import About from "../../components/About";
-import Breadcrumb from "../../components/Common/Breadcrumb";
-import Team from "../../components/Team";
+"use client";
 
-const AboutPage = () => {
+import Breadcrumb from "../../components/Common/Breadcrumb";
+import { useLanguage } from "@/context/LanguageContext";
+import JordanianDoctors from "../../components/Services/Jordanian_Doctors";
+
+const RegistrationDoctors = () => {
+  const { language } = useLanguage();
+
   return (
-    <main >
-      <Breadcrumb pageName="About Us Page" />
-      <About />
-      <Team />
+    <main dir={language === "ar" ? "rtl" : "ltr"}>
+      <Breadcrumb 
+        pageName={language === "ar" ? "تسجيل الطبيب لغاية الإمتياز" : "Registration Doctors Until Emtyaz"}
+      />
+      <JordanianDoctors />
     </main>
   );
 };
 
-export default AboutPage;
+export default RegistrationDoctors;
