@@ -29,11 +29,11 @@ export const Parag = ({ textAr, textEn }: { textAr: string, textEn: string }) =>
     <>
     {language === "ar" 
       ? 
-      <p className="px-7 mb-5 text-xl leading-relaxed text-body-color dark:text-dark-6">
+      <p className="px-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6">
           {textAr}
         </p>
       :
-      <p className="px-7 mb-5 text-base leading-relaxed text-body-color dark:text-dark-6">
+      <p className="px-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6">
           {textEn}
         </p>
     }

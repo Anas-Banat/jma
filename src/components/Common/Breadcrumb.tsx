@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import menuData from "../Header/menuData";
 
 
 const Breadcrumb = ({
@@ -11,11 +10,13 @@ const Breadcrumb = ({
   pageName: string;
 }) => {
 
-  const {lang, language } = useLanguage();
+  const { language } = useLanguage();
 
   return (
     <>
-      <div dir={language === "ar" ? "rtl" : "ltr"} className="dark:bg-dark relative z-10 overflow-hidden pb-[30px] pt-[120px] md:pt-[130px] lg:pt-[160px]" >
+      <div 
+        dir={language === "ar" ? "rtl" : "ltr"} 
+        className="dark:bg-dark relative z-10 overflow-hidden pb-[30px] pt-[160px] md:pt-[130px] lg:pt-[160px]" >
         <div className="from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3 absolute bottom-0 left-0 h-px w-full bg-gradient-to-r"></div>
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">

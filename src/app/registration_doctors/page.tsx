@@ -2,7 +2,7 @@
 
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
-import JordanianDoctors from "../../components/Services/Jordanian_Doctors";
+import RegistrationDoctorsPage from "../../components/Services/Registration_Doctors";
 
 const RegistrationDoctors = () => {
   const { language } = useLanguage();
@@ -12,7 +12,8 @@ const RegistrationDoctors = () => {
       <Breadcrumb 
         pageName={language === "ar" ? "تسجيل الطبيب لغاية الإمتياز" : "Registration Doctors Until Emtyaz"}
       />
-      <JordanianDoctors />
+      <RegistrationDoctorsPage />
+
     </main>
   );
 };

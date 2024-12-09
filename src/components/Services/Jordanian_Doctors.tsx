@@ -6,19 +6,6 @@ import Image from "next/image";
 const JordanianDoctors = () => {
 
   return (
-      <div className="container my-10">
-        <div className="wow fadeInUp" data-wow-delay=".2s">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4">
-              <div className="w-full ">
-                <Image
-                  src="/images/blog/bannder-ad.png"
-                  alt="About Association Council"
-                  width={2000}
-                  height={2000}
-                  className="h-[400px] w-full object-cover object-center"
-                />
-              </div>
               <div className="my-12 lg:mb-0">
                 <SubTitle
                   titleAr="الأوراق المطلوبة لتسجيل الأطباء الأردنيين تسجيلاً مؤقتاً لغايات عمل سنة الإمتياز:"
@@ -69,10 +56,6 @@ const JordanianDoctors = () => {
                   textEn="11- Applications for internship doctors are received and registered at the main center in Amman and at the sub-committee centers in each of the governorates of Karak, Irbid and Zarqa."
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
   );
 };
 
