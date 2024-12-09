@@ -12,6 +12,7 @@ import About_Conferences from "../components/About_Conferences";
 import Funds from "../components/Funds";
 import { useLanguage } from "@/context/LanguageContext";
 import RegistrationDoctors from "./registration_doctors/page";
+import RegistrationDropdown from "./test_option/page";
 
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <Contact />
       <Faq />
       <Location />
+      <RegistrationDropdown />
     </main>
   );
 }

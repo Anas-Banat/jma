@@ -35,7 +35,7 @@ const RegistrationDoctorsPage = () => {
 
               <div className="text-center">
                 <Link
-                  href="/register_form"
+                  href="/registration_form"
                   className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
                     ${
                       language === "ar"

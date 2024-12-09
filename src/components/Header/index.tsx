@@ -3,7 +3,7 @@ import { signOut, useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Logo from './logo';
 import menuData from "./menuData";
 import { useLanguageString, useLanguage } from '../../context/LanguageContext';
