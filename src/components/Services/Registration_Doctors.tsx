@@ -10,8 +10,8 @@ const RegistrationDoctorsPage = () => {
   const { language } = useLanguage();
 
   return (
-    // className="dark:bg-dark relative z-10 overflow-hidden pb-[30px] pt-[160px] md:pt-[130px] lg:pt-[160px]" >
-      <div className="container my-10 dark:bg-dark relative z-10 overflow-hidden pb-[30px] pt-[160px] md:pt-[130px] lg:pt-[160px]">
+    <div className="dark:bg-dark" >
+      <div className="container py-10 dark:bg-dark">
         <div className="wow fadeInUp" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4">
@@ -50,6 +50,7 @@ const RegistrationDoctorsPage = () => {
           </div>
         </div>
       </div>
+    </div>  
   );
 };
 
