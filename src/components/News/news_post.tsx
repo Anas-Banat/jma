@@ -37,6 +37,39 @@ const posts = [
     imageUrl:
     '/images/news/health_support.jpg',
   },
+  {
+    id: 4,
+    title: 'Boost your conversion rate',
+    href: '#',
+    description:
+      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      date: 'Oct 30, 2024',
+      datetime: '2024-10-30',
+    imageUrl:
+    '/images/news/health_support.jpg',
+  },
+  {
+    id: 5,
+    title: 'Boost your conversion rate',
+    href: '#',
+    description:
+      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Oct 30, 2024',
+    datetime: '2024-10-30',
+    imageUrl:
+    '/images/news/jma103.png',
+  },
+  {
+    id: 6,
+    title: 'Boost your conversion rate',
+    href: '#',
+    description:
+      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Oct 30, 2024',
+    datetime: '2024-10-30',
+    imageUrl:
+    '/images/blog/blog-02.jpg',
+  },
 ]
 
 

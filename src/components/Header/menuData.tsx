@@ -99,6 +99,13 @@ const menuData: Menu[] = [
           path: "health_insurance_fund",
           newTab: false,
         },
+        {
+          id: 306,
+          en_title: "Professional and Specialty Titles Fund",
+          ar_title: "صندوق القاب المهنة والأختصاص",
+          path: "specialty_titles_fund",
+          newTab: false,
+        },
       ],
     },
     {

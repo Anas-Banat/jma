@@ -110,7 +110,7 @@ const Team = () => {
     <section
       dir={language === "ar" ? "rtl" : "ltr"}
       id="team"
-      className="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[60px]"
+      className="overflow-hidden bg-gray-1 pb-5 pt-20 dark:bg-dark-2 lg:pb-[30px] lg:pt-[60px]"
     >
       <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center">

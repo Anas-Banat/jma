@@ -49,7 +49,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
     <>
     {language === "ar" 
       ? 
-      <p className="pr-7 mb-5 text-xl leading-relaxed text-body-color dark:text-dark-6">
+      <p className="pr-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6">
         للمزيد من المعلومات،
         <a 
           href={urlPathAr} 
@@ -61,7 +61,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
          لتحميل الملف
       </p>
       :
-      <p className="pl-7 mb-5 text-base leading-relaxed text-body-color dark:text-dark-6">
+      <p className="pl-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6">
         For more information, please 
         <a 
           href={urlPathEn}
