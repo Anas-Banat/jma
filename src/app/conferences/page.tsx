@@ -1,16 +1,25 @@
-import About from "../../components/About";
+"use client";
+
+import Conferences from "../../components/Conferences";
 import Breadcrumb from "../../components/Common/Breadcrumb";
-import Team from "../../components/Team";
+import { useLanguage } from "@/context/LanguageContext";
 
 
-const AboutPage = () => {
+const ConferencesPage = () => {
+  const { language } = useLanguage();
+
   return (
-    <main >
-      <Breadcrumb pageName="About Us Page" />
-      <About />
-      <Team />
+    <main dir={language === "ar" ? "rtl" : "ltr"}>
+      <Breadcrumb 
+        pageName={language === "ar" ? "المؤتمرات" : "Conferences"}
+      />
+      <Conferences />
     </main>
   );
 };
 
-export default AboutPage;
+export default ConferencesPage;
+
+
+
+
