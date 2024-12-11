@@ -9,13 +9,13 @@ export const SubTitle = ({ titleAr, titleEn }: { titleAr: string, titleEn: strin
     <>
     {language === "ar" 
       ? 
-        <h2 className="mt-10 mb-5 text-3xl font-bold leading-tight text-primary dark:text-white sm:text-[40px] sm:leading-[1.2]">
+        <h2 className="mt-10 mb-5 text-xl font-bold leading-tight text-primary dark:text-white sm:text-[30px] sm:leading-[1.2]">
           {titleAr}
         </h2>
       :
-        <h2 className="my-10 text-3xl font-bold leading-tight text-primary dark:text-white sm:text-[40px] sm:leading-[1.2]">
+        <h3 className="my-10 text-lg font-bold leading-tight text-primary dark:text-white sm:text-[25px] sm:leading-[1.2]">
           {titleEn}
-        </h2>
+        </h3>
     }
     </>
   );
@@ -29,11 +29,11 @@ export const Parag = ({ textAr, textEn }: { textAr: string, textEn: string }) =>
     <>
     {language === "ar" 
       ? 
-      <p className="px-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6">
+      <p className="px-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
           {textAr}
         </p>
       :
-      <p className="px-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6">
+      <p className="px-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
           {textEn}
         </p>
     }
