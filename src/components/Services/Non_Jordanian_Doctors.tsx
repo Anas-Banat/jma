@@ -32,11 +32,11 @@ const NonJordanianDoctors = () => {
                 />
                 <Parag
                   textAr="6- صورة مصدقة من وزاره التعليم العالي / الجبيهه عن شهادة البكالوريوس في الطب العام+السنه التحضيريه."
-                  textEn="6- 6- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the Bachelor's degree in General Medicine + the preparatory year."
+                  textEn="6- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the Bachelor's degree in General Medicine + the preparatory year."
                 />
                 <Parag
                   textAr="7- صورة مصدقة من وزاره التعليم العالي / الجبيهه عن كشف علامات الجامعة."
-                  textEn="7- 7- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the university transcript."
+                  textEn="7- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the university transcript."
                 />
                 <Parag
                   textAr="8- صورة مصدقة من وزاره التعليم العالي / الجبيهه عن معادلة الشهادة لخريجي الجامعات غير الأردنية."
@@ -44,7 +44,7 @@ const NonJordanianDoctors = () => {
                 />
                 <Parag
                   textAr="9- رسوم الامتياز ١٠٠ دينار."
-                  textEn="9- 9- Excellence fees 100 dinars."
+                  textEn="9- Excellence fees 100 dinars."
                 />
 
                 <SubTitle
