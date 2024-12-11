@@ -1,5 +1,7 @@
 "use client";
 
+import Breadcrumb from "../../components/Common/Breadcrumb";
+import { useLanguage } from "@/context/LanguageContext";
 import React, { useState } from "react";
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
 
@@ -62,8 +64,15 @@ const RegistrationDropdown: React.FC = () => {
     setVisibleOption(visibleOption === value ? null : value);
   };
 
+  const { lang, language } = useLanguage();
+
+
   return (
-    <div className="container my-10">
+    <main dir={language === "ar" ? "rtl" : "ltr"}>
+      <Breadcrumb 
+        pageName={language === "ar" ? "معرض الصور" : "Photos Gallery"}
+      />
+      <div className="container my-10">
         <div className="wow fadeInUp" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4">
@@ -100,7 +109,9 @@ const RegistrationDropdown: React.FC = () => {
             </div>
           </div>
         </div>
-    </div>    
+    </div>
+    </main>
+        
   );
 };
 

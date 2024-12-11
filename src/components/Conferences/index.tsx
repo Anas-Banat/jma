@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { SubTitle } from "../Other/Other";
 
 const posts = [
   {
@@ -98,9 +99,10 @@ export default function Conferences() {
     <div className="bg-gray-1 dark:bg-dark py-10 sm:py-20 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            {language === 'ar' ? 'مؤتمرات النقابة' : 'Association Conferences'}
-          </h2>
+          <SubTitle 
+            titleAr={"مؤتمرات النقابة"} 
+            titleEn={"Association Conferences"}>
+          </SubTitle>
         </div>
         <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 px-10">
           {posts.map((post) => (
