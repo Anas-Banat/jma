@@ -184,9 +184,9 @@ const RegistrationDropdown: React.FC = () => {
                         border border-gray-300 whitespace-pre-line"
                       >
                         <h3 className="font-semibold text-lg mb-2 ">{language === "ar" ? "التفاصيل:" : "Details:"}</h3>
-                        <p className="leading-6">
+                        
                           <Parag textAr={option.detailsAr} textEn={option.detailsEn}/>
-                        </p>
+                        
                       </div>
                     )}
                     
