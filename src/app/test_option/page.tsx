@@ -80,7 +80,6 @@ const registrationOptions: RegistrationOption[] = [
       6- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the Bachelor's degree in General Medicine + the preparatory year.
       7- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the university transcript.
       8- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the equivalency of the certificate for graduates of non-Jordanian universities.
-      To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
       9- Excellence fees 100 dinars.
       To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
       10- One year of training (internship) or 3 years of experience or a board certificate for those wishing to obtain a fellowship.
