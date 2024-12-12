@@ -33,7 +33,7 @@ export const Parag = ({ textAr, textEn }: { textAr: string, textEn: string }) =>
           {textAr}
         </p>
       :
-      <p className="px-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
+      <p className="px-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
           {textEn}
         </p>
     }
@@ -49,24 +49,24 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
     <>
     {language === "ar" 
       ? 
-      <p className="pr-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6">
+      <p className="pr-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
         للمزيد من المعلومات،
         <a 
           href={urlPathAr} 
           download
-          className="px-1 mb-5 text-xl font-bold underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-xl font-bold underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500 sm:text-[20px] sm:leading-[1.2]"
         >
           اضغط هنا
         </a>
          لتحميل الملف
       </p>
       :
-      <p className="pl-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6">
+      <p className="pl-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
         For more information, please 
         <a 
           href={urlPathEn}
           download
-          className="px-1 mb-5 text-base font-bold underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500"
+          className="px-1 mb-5 text-base font-bold underline leading-relaxed text-red dark:text-red hover:text-blue-500 hover:dark:text-blue-500 sm:text-[15px] sm:leading-[1.2]"
         >
           click here
         </a>

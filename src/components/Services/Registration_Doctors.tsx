@@ -1,13 +1,24 @@
 "use client";
 
+import { Parag, SubTitle } from "../Other/Other";
 import Image from "next/image";
-import JordanianDoctors from "./Jordanian_Doctors";
-import NonJordanianDoctors from "./Non_Jordanian_Doctors";
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import React, { useState } from "react";
+import { SlArrowUp, SlArrowDown } from "react-icons/sl";
+import Link from "next/link";
+import registration_details from "./Registration_Details";
 
-const RegistrationDoctorsPage = () => {
+
+
+const RegistrationDr: React.FC = () => {
+  const [visibleOption, setVisibleOption] = useState<string | null>(null);
+
+  const toggleDetails = (value: string) => {
+    setVisibleOption(visibleOption === value ? null : value);
+  };
+
   const { language } = useLanguage();
+
 
   return (
     <div className="dark:bg-dark" >
@@ -24,45 +35,79 @@ const RegistrationDoctorsPage = () => {
                   className="h-[400px] w-full object-cover object-center"
                 />
               </div>
+                <SubTitle
+                  titleAr="تسجيل الطبيب لغاية الإمتياز"
+                  titleEn="Registration Doctors Until Emtyaz"
+                />
+                <Parag
+                  textAr="على كل طبيب أنهى دراسته في كلية الطب، التقدم بطلب التسجيل المؤقت لغايات الأمتياز (التدريب)."
+                  textEn="Every doctor who has completed his studies at the Faculty of Medicine must apply for temporary registration for the purposes of internship (training)."
+                />
+                {registration_details.map((option) => (
+                  <div key={option.value} className="mb-6">
+                    <button
+                      className="flex justify-between items-center w-full 
+                        bg-gray-300 dark:bg-gray-700 hover:bg-blue-400 px-4 rounded-md 
+                        focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      onClick={() => toggleDetails(option.value)}
+                    >
+                      <SubTitle titleAr={option.labelAr} titleEn={option.labelEn} />
+                      {visibleOption === option.value ? (
+                        <SlArrowUp className="h-6 w-6 text-dark-700 font-extrabold" />
+                      ) : (
+                        <SlArrowDown className="h-6 w-6 text-dark-700 font-extrabold" />
+                      )}
+                    </button>
 
-              <JordanianDoctors />
-
-              <p className="my-20 text-center text-2xl text-red font-bold">
-                ********************
-              </p>
-
-              <NonJordanianDoctors />
-
-              <div className="text-center">
-                <Link
-                  href="/registration_form"
-                  className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
-                    ${
-                      language === "ar"
-                    ? "font-semibold text-xl"
-                      : "font-medium text-base"
-                    }`}
-                  >
-                  {language === "en" ? "Register" : "تسجيل"}
-                </Link>
-                <Link
-                  href="/test_option"
-                  className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
-                    ${
-                      language === "ar"
-                    ? "font-semibold text-xl"
-                      : "font-medium text-base"
-                    }`}
-                  >
-                  {language === "en" ? "Register" : "Test"}
-                </Link>
+                    {visibleOption === option.value && (
+                      <div
+                        className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-md shadow-inner 
+                        border border-gray-300 whitespace-pre-line"
+                      >
+                        <h3 className="font-semibold text-lg mb-2 ">{language === "ar" ? "التفاصيل:" : "Details:"}</h3>
+                        
+                          <Parag textAr={option.detailsAr} textEn={option.detailsEn}/>
+                        
+                      </div>
+                    )}
+                    
+                  </div>
+                ))}
+                    <SubTitle 
+                      titleAr="ملاحظة: يعفى من الفحص الإجمالي للأطباء:" 
+                      titleEn="Note: Doctors are exempt from the comprehensive examination."
+                    />
+                    <Parag 
+                      textAr="الأطباء الأردنيون الذين تخرجو وحصلو على تصريح مزاولة المهنة قبل 01/09/1970." 
+                      textEn="Jordanian doctors who graduated and obtained a license to practice the profession before 01/09/1970." 
+                    />
+                    <Parag 
+                      textAr="الطبيب الاخصائي وفقا لقانون المجلس الطبي الاردني." 
+                      textEn="Specialist physician according to the Jordanian Medical Council Law." 
+                    />
+                    <Parag 
+                      textAr="خريجوا الجامعات الأردنية." 
+                      textEn="Jordanian university graduates." 
+                    />
+                    <div className="text-center">
+                    <Link
+                      href="/test_option"
+                      className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
+                        ${
+                          language === "ar"
+                        ? "font-semibold text-xl"
+                          : "font-medium text-base"
+                        }`}
+                      >
+                      {language === "en" ? "Register" : "تسجيل"}
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>  
   );
 };
 
-export default RegistrationDoctorsPage;
+export default RegistrationDr;
