@@ -80,7 +80,6 @@ const registrationOptions: RegistrationOption[] = [
       6- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the Bachelor's degree in General Medicine + the preparatory year.
       7- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the university transcript.
       8- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the equivalency of the certificate for graduates of non-Jordanian universities.
-      To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
       9- Excellence fees 100 dinars.
       ** To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
       10- One year of training (internship) or 3 years of experience or a board certificate for those wishing to obtain a fellowship.
@@ -95,40 +94,43 @@ const registrationOptions: RegistrationOption[] = [
   },
   {
     labelAr: "التسجيل على قائمة الفحص الإجمالي",
-    labelEn: "Register for the total test checklist",
+    labelEn: "Registration on the Comprehensive Examination List",
     value: "exam-list",
     detailsAr: `المتطلبات:
-      - شهادة إنهاء فترة الامتياز من المستشفى
-      - في حال وجود تسجيل سابق في النقابة تكون الرسوم بمقدار (31) دينار للأردنيين وأبناء الأردنيات (في حالة التسجيل السابق)
-      - رسوم مقدارها (90) دينار للأردنيين وأبناء الأردنيات (بدون تسجيل سابق)`,
+      1- شهادة إنهاء فترة الامتياز من المستشفى
+      2- في حال وجود تسجيل سابق في النقابة تكون الرسوم بمقدار (31) دينار للأردنيين وأبناء الأردنيات (في حالة التسجيل السابق)
+      3- رسوم مقدارها (90) دينار للأردنيين وأبناء الأردنيات (بدون تسجيل سابق)`,
     detailsEn: `The Requirments:
-      - شهادة إنهاء فترة الامتياز من المستشفى
-      - رسوم مقدارها (31) دينار للأردنيين وأبناء الأردنيات (في حالة التسجيل السابق)
-      - رسوم مقدارها (90) دينار للأردنيين وأبناء الأردنيات (بدون تسجيل سابق)`,
+      1- شهادة إنهاء فترة الامتياز من المستشفى
+      2- رسوم مقدارها (31) دينار للأردنيين وأبناء الأردنيات (في حالة التسجيل السابق)
+      3- رسوم مقدارها (90) دينار للأردنيين وأبناء الأردنيات (بدون تسجيل سابق)`,
   },
   {
     labelAr: "التسجيل الدائم بعد اجتياز الفحص الإجمالي - الأردنيين",
-    labelEn: "التسجيل الدائم بعد اجتياز الفحص الإجمالي - الأردنيين",
+    labelEn: "Permanent registration after passing the comprehensive examination - Jordanians",
     value: "permanent-exam-jordanian",
     detailsAr: `المتطلبات:
-      - صورة مصدقة عن كشف علامات الفحص الإجمالي
-      - رسوم مقدارها (35) دينار`,
-    detailsEn: `المتطلبات:
-      - صورة مصدقة عن كشف علامات الفحص الإجمالي
-      - رسوم مقدارها (35) دينار`,
+      1- صورة مصدقة عن كشف علامات الفحص الإجمالي
+      2- رسوم مقدارها (35) دينار`,
+    detailsEn: `The Requirments:
+      1- A certified copy of the results of the comprehensive examination
+      2- A fee of (35) dinars
+      `,
   },
   {
     value: "permanent-jordanian",
     labelAr: "التسجيل الدائم للأردنيين خريجي الجامعات الأردنية",
-    labelEn: "التسجيل الدائم للأردنيين خريجي الجامعات الأردنية",
+    labelEn: "Permanent registration for graduates of Jordanian universities",
     detailsAr: `المتطلبات:
-      - شهادة إنهاء فترة الامتياز من المستشفى
-      - شهادة تأكيد من المجلس الطبي الأردني بإنهاء فترة الامتياز
-      - رسوم مقدارها (35) دينار`,
-    detailsEn: `المتطلبات:
-      - شهادة إنهاء فترة الامتياز من المستشفى
-      - شهادة تأكيد من المجلس الطبي الأردني بإنهاء فترة الامتياز
-      - رسوم مقدارها (35) دينار`,
+      1- شهادة إنهاء فترة الامتياز من المستشفى.
+      2- شهادة تأكيد من المجلس الطبي الأردني بإنهاء فترة الامتياز.
+      3- رسوم مقدارها (35) دينار.
+      `,
+    detailsEn: `The Requirments:
+      1- Certificate of completion of fellowship from the hospital.
+      2- Certificate of completion of fellowship from the Jordanian Medical Council.
+      3- A fee of (35) dinars
+      `,
   },    
 ];
 
@@ -181,10 +183,10 @@ const RegistrationDropdown: React.FC = () => {
                         className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-md shadow-inner 
                         border border-gray-300 whitespace-pre-line"
                       >
-                        <h3 className="font-semibold text-lg mb-2 ">التفاصيل:</h3>
-                        <p className="leading-6">
+                        <h3 className="font-semibold text-lg mb-2 ">{language === "ar" ? "التفاصيل:" : "Details:"}</h3>
+                        
                           <Parag textAr={option.detailsAr} textEn={option.detailsEn}/>
-                        </p>
+                        
                       </div>
                     )}
                     

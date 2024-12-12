@@ -23,7 +23,6 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <News />
-      <RegistrationDoctors />
       <About_Conferences />
       <Funds />
       <Services />
