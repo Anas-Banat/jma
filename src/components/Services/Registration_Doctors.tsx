@@ -89,7 +89,7 @@ const RegistrationDr: React.FC = () => {
                       textAr="خريجوا الجامعات الأردنية." 
                       textEn="Jordanian university graduates." 
                     />
-                    <div className="text-center">
+                  <div className="text-center">
                     <Link
                       href="/test_option"
                       className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
