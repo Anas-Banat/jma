@@ -1,7 +1,6 @@
 "use client";
 
 import { SubTitle, Parag} from "../../components/Other/Other";
-import Image from "next/image";
 
 const JordanianDoctors = () => {
 
