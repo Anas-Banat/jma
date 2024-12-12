@@ -61,12 +61,12 @@ const registrationOptions: RegistrationOption[] = [
       7- صورة مصدقة من وزاره التعليم العالي / الجبيهه عن كشف علامات الجامعة.
       8- صورة مصدقة من وزاره التعليم العالي / الجبيهه عن معادلة الشهادة لخريجي الجامعات غير الأردنية.
       9- رسوم الامتياز ١٠٠ دينار.
-      وللحصول على برنامج الاقامه او الاختصاص او الزماله يتم اضافه المتطلبات التالية (من 1 - 13 ):
+      ** وللحصول على برنامج الاقامه او الاختصاص او الزماله يتم اضافه المتطلبات التالية (من 1 - 13 ):
       10- سنة التدريب (الامتياز) او ٣ سنوات خبره أو شهاده البورد لمن يرغب بالزماله.
       11- تصريح مزاوله المهنه وعضويه انتساب لاي نقابه او جمعيه طبيه عربيه لخريجي الجامعات غير الاردنيه للاطباء العرب وترخيص مزاوله للاجانب من اجل الاعفاء من الفحص الاجمالي.
       12- كتاب موافقه المستشفى على برنامج الاقامه ونسبه قبول غير الاردنيين الى الاردنيين وبشرط عدم تجاوزها ٣٠% بالنسبه للمستشفيات الخاصه فقط.
       13- شهاده البورد لمن يرغب باستكمال الزماله.
-      وللعمل الاختصاصي يتم اضافه المتطلبات التالية (من 1 - 16 ):
+      ** وللعمل الاختصاصي يتم اضافه المتطلبات التالية (من 1 - 16 ):
       14- الاعلان عن طريق النقابة عن الوظيفة الشاغرة في الجهة التي ينوي العمل بها ودفع رسوم مقدارها ١٠٠ دينار واذا لم يتقدم اي طبيب اردني تتم الموافقة.
       15- رسوم الاقامه ١٠٠ دينار.
       16- رسوم الزماله او الاختصاص ٣٠٠ دينار.
@@ -82,12 +82,12 @@ const registrationOptions: RegistrationOption[] = [
       8- A certified copy from the Ministry of Higher Education / Al-Jubaiha of the equivalency of the certificate for graduates of non-Jordanian universities.
       To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
       9- Excellence fees 100 dinars.
-      To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
+      ** To obtain a residency, specialty or fellowship program, the following requirements are added (from 13-1):
       10- One year of training (internship) or 3 years of experience or a board certificate for those wishing to obtain a fellowship.
       11- A permit to practice the profession and membership in any Arab medical union or association for graduates of non-Jordanian universities for Arab doctors and a license to practice for foreigners in order to be exempt from the comprehensive examination.
       12- A letter of approval from the hospital for the residency program and the percentage of acceptance of non-Jordanians to Jordanians, provided that it does not exceed 30% for private hospitals only.
       13- A board certificate for those wishing to complete the fellowship.
-      For specialist work, add the following requirements (from 16-1):
+      ** For specialist work, add the following requirements (from 16-1):
       14- Announcement through the union about the vacant position in the entity in which he intends to work and payment of a fee of 100 dinars, and if no Jordanian doctor applies, approval will be granted.
       15- Residency fees 100 dinars.
       16- Fellowship or specialization fees 300 dinars.
