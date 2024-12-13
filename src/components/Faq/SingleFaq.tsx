@@ -19,7 +19,7 @@ const SingleFaq = (props: { question: string; answer: string }) => {
               <h3 className="px-4 mb-6 text-xl font-semibold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 {question}
               </h3>
-              <p className="px-4 text-base text-body-color dark:text-dark-6">
+              <p className="px-4 text-base text-body-color line-clamp-2 dark:text-dark-6">
                 {answer}
               </p>
             </div>
