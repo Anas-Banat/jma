@@ -106,7 +106,7 @@ const RegistrationDr: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
   );
 };
 
