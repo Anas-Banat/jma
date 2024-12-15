@@ -96,8 +96,8 @@ const SpecialtyTitlesFund = () => {
                 />
 
                 <ClickHere 
-                  urlPathAr="/files/funds/social_solidarity_fund.pdf"
-                  urlPathEn="/files/funds/social_solidarity_fund.pdf"
+                  urlPathAr="#"
+                  urlPathEn="#"
                 />
               </div>
             </div>
