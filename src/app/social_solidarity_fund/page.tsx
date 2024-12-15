@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
-import { SubTitle, Parag } from "../../components/Other/Other";
+import { SubTitle, Parag, ClickHere } from "../../components/Other/Other";
 import DoctorsTable from "../../components/Funds/SocialSolidarityTable";
 
 
@@ -84,6 +84,10 @@ const SocialSolidarityFund = () => {
                   titleEn="Fund Management Committee for the 9th Cycle (2022-2025):"
                 />
                 <DoctorsTable />
+                <ClickHere 
+                  urlPathAr="/files/funds/social_solidarity_fund.pdf"
+                  urlPathEn="/files/funds/social_solidarity_fund.pdf"
+                />
               </div>
             </div>
           </div>
