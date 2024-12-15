@@ -47,15 +47,15 @@ const RegistrationDr: React.FC = () => {
                   <div key={option.value} className="mb-6">
                     <button
                       className="flex justify-between items-center w-full 
-                        bg-gray-300 dark:bg-gray-700 hover:bg-blue-400 px-4 rounded-md 
-                        focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        bg-white dark:bg-gray-700 hover:bg-gray-100 px-4 rounded-md 
+                        focus:outline-none focus:ring-2 focus:ring-blue-400 border-2 "
                       onClick={() => toggleDetails(option.value)}
                     >
                       <SubTitle titleAr={option.labelAr} titleEn={option.labelEn} />
                       {visibleOption === option.value ? (
-                        <SlArrowUp className="h-6 w-6 text-dark-700 font-extrabold" />
+                        <SlArrowUp className="h-12 w-12 text-white bg-blue-900 p-2 rounded-full font-extrabold" />
                       ) : (
-                        <SlArrowDown className="h-6 w-6 text-dark-700 font-extrabold" />
+                        <SlArrowDown className="h-12 w-12 text-white bg-blue-900 p-2 rounded-full font-extrabold" />
                       )}
                     </button>
 
@@ -65,9 +65,7 @@ const RegistrationDr: React.FC = () => {
                         border border-gray-300 whitespace-pre-line"
                       >
                         <h3 className="font-semibold text-lg mb-2 ">{language === "ar" ? "التفاصيل:" : "Details:"}</h3>
-                        
                           <Parag textAr={option.detailsAr} textEn={option.detailsEn}/>
-                        
                       </div>
                     )}
                     
