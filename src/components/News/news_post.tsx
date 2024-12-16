@@ -3,97 +3,12 @@
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { SubTitle } from "../Other/Other";
-
-const posts = [
-  {
-    id: 1,
-    titleEn: 'Boost your conversion rate',
-    titleAr: 'Boost your conversion rate',
-    href: '#',
-    descriptionEn:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    descriptionAr:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Oct 30, 2024',
-    datetime: '2024-10-30',
-    imageUrl:
-    '/images/news/jma103.png',
-  },
-  {
-    id: 2,
-    titleEn: 'Boost your conversion rate',
-    titleAr: 'Boost your conversion rate',
-    href: '#',
-    descriptionEn:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    descriptionAr:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Oct 30, 2024',
-    datetime: '2024-10-30',
-    imageUrl:
-    '/images/blog/blog-02.jpg',
-  },
-  {
-    id: 3,
-    titleEn: 'Boost your conversion rate',
-    titleAr: 'Boost your conversion rate',
-    href: '#',
-    descriptionEn:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    descriptionAr:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Oct 30, 2024',
-    datetime: '2024-10-30',
-    imageUrl:
-    '/images/news/health_support.jpg',
-  },
-  {
-    id: 4,
-    titleEn: 'Boost your conversion rate',
-    titleAr: 'Boost your conversion rate',
-    href: '#',
-    descriptionEn:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    descriptionAr:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Oct 30, 2024',
-    datetime: '2024-10-30',
-    imageUrl:
-    '/images/news/health_support.jpg',
-  },
-  {
-    id: 5,
-    titleEn: 'Boost your conversion rate',
-    titleAr: 'Boost your conversion rate',
-    href: '#',
-    descriptionEn:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    descriptionAr:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Oct 30, 2024',
-    datetime: '2024-10-30',
-    imageUrl:
-    '/images/news/jma103.png',
-  },
-  {
-    id: 6,
-    titleEn: 'Boost your conversion rate',
-    titleAr: 'Boost your conversion rate',
-    href: '#',
-    descriptionEn:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    descriptionAr:
-      'Ilo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Oct 30, 2024',
-    datetime: '2024-10-30',
-    imageUrl:
-    '/images/blog/blog-02.jpg',
-  },
-]
+import Link from "next/link";
+import { posts } from "./postData";
 
 
 export default function Post() {
-  const { lang, language } = useLanguage();
+  const { lang } = useLanguage();
 
   return (
     <div className="bg-gray-1 dark:bg-dark py-10 sm:py-20 ">
@@ -117,16 +32,16 @@ export default function Post() {
                 />
               </div>
               <div className="flex items-center gap-x-4 text-xs">
-                <time dateTime={post.datetime} className="text-gray-500 dark:text-gray-100">
+                <time className="text-gray-500 dark:text-gray-100">
                   {post.date}
                 </time>
               </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg/6 font-semibold text-dark dark:text-white group-hover:text-blue">
-                  <a href={post.href}>
+                  <Link href={`/news/${post.id}`}>
                     <span className="absolute inset-0" />
                     {lang === 'ar' ? post.titleAr : post.titleEn}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm/6 text-dark dark:text-gray-300">{lang === 'ar' ? post.descriptionAr : post.descriptionEn}</p>
               </div>

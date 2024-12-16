@@ -11,7 +11,6 @@ import Services from "../components/Services";
 import About_Conferences from "../components/About_Conferences";
 import Funds from "../components/Funds";
 import { useLanguage } from "@/context/LanguageContext";
-import PostsList from "./posts/page";
 
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
       <Contact />
       <Faq />
       <Location />
-      <PostsList />
     </main>
   );
 }
