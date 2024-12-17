@@ -7,7 +7,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import Breadcrumb from "../../../components/Common/Breadcrumb";
 
 
-
 interface PostDetailsProps {
   params: { id: string };
 }
@@ -47,7 +46,6 @@ export default function PostDetails({ params }: PostDetailsProps) {
                   <p className="text-lg leading-relaxed">{lang === 'ar' ? post?.descriptionAr : post?.descriptionEn}</p>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
