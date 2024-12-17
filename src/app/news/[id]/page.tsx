@@ -33,14 +33,14 @@ export default async function PostDetails({ params }: PostDetailsProps) {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4">
               <div className="my-12  lg:mb-0">
-                <div className="max-w-4xl mx-auto">
+                <div className="place-items-center max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold mb-4">{lang === 'ar' ? post?.titleAr : post?.titleEn}</h1>
                   <Image
                     src={post?.imageUrl || ""}
                     alt={lang === 'ar' ? post?.titleAr : post?.titleEn || ""}
                     width={800}
                     height={400}
-                    className="w-full h-64 object-cover rounded-lg mb-4"
+                    className="w-9/12 h-auto rounded-lg mb-4"
                   />
                   <p className="text-gray-500 mb-4">{post?.date}</p>
                   <p className="text-lg leading-relaxed">{lang === 'ar' ? post?.descriptionAr : post?.descriptionEn}</p>
