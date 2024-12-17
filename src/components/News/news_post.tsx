@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import { SubTitle } from "../Other/Other";
 import Link from "next/link";
 import { posts } from "./postData";
 

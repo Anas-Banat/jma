@@ -17,6 +17,10 @@ body[dir='ltr'] {
   direction: ltr;
 }
 
+.input-field {
+  @apply w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
 .sticky-menu .navbar-logo {
   @apply py-2;
 }
