@@ -8,13 +8,13 @@ import Breadcrumb from "../../../components/Common/Breadcrumb";
 
 
 interface PostDetailsProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export default function PostDetails({ params }: PostDetailsProps) {
+export default async function PostDetails({ params }: PostDetailsProps) {
   const { language,lang } = useLanguage();
   
-  const id = parseInt(params.id);
+  const id = parseInt((await params).id);
 
   // Find the post by ID
   const post = posts.find((item) => item.id === id);
