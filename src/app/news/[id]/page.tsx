@@ -11,10 +11,10 @@ interface PostDetailsProps {
   params: Promise<{ id: string }>;
 }
 
-export default async function PostDetails({ params }: PostDetailsProps) {
+export default function PostDetails({ params }: PostDetailsProps) {
   const { language,lang } = useLanguage();
   
-  const id = parseInt((await params).id);
+  const id = parseInt((params).id);
 
   // Find the post by ID
   const post = posts.find((item) => item.id === id);
