@@ -1,4 +1,8 @@
 "use client";
+
+import { Parag, SubTitle } from "../../components/Other/Other";
+import Breadcrumb from "../../components/Common/Breadcrumb";
+import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
 
 export default function ApplicationForm() {
@@ -30,6 +34,8 @@ export default function ApplicationForm() {
     captcha: "",
   });
 
+  const { language } = useLanguage();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -42,226 +48,234 @@ export default function ApplicationForm() {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4 text-center">نموذج تقديم الطلب</h1>
-      <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-lg shadow-lg">
-        {/* Basic Information */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">البيانات الأساسية</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label>
-              الاسم بالعربية حسب الهوية:
-              <input
-                type="text"
-                name="arabicName"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              الاسم بالانجليزية حسب الهوية:
-              <input
-                type="text"
-                name="englishName"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              الجنسية:
-              <select name="nationality" onChange={handleChange} className="input-field">
-                <option value="">اختر</option>
-                <option value="Jordanian">أردني</option>
-                <option value="Other">غير ذلك</option>
-              </select>
-            </label>
-            <label>
-              الجنس:
-              <div className="flex gap-4">
-                <label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="ذكر"
-                    onChange={handleChange}
-                  />
-                  ذكر
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="انثى"
-                    onChange={handleChange}
-                  />
-                  انثى
-                </label>
-              </div>
-            </label>
-            <label>
-              مكان الولادة:
-              <input type="text" name="placeOfBirth" onChange={handleChange} className="input-field" />
-            </label>
-            <label>
-              تاريخ الميلاد:
-              <input
-                type="date"
-                name="dateOfBirth"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
+    <main 
+      dir={language === "ar" ? "rtl" : "ltr"}
+      className="bg-gray-1 dark:bg-dark ">
+      <Breadcrumb 
+        pageName={language === "ar" ? "نموذج التسجيل" : "Registration Form"}
+      />
+    <div className="container mx-auto lg:py-6 lg:px-40 ">
+          
+            <form onSubmit={handleSubmit} className="place-items-center space-y-6 bg-white p-6 rounded-lg shadow-lg">
+              {/* Basic Information */}
+              <section>
+                <SubTitle titleAr={"البيانات الاساسية"} titleEn={"Basic Information"} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <label>
+                    <Parag textAr="الاسم بالعربية حسب الهوية:" textEn="Arabic Name according to the ID:" />
+                    <input
+                      type="text"
+                      name="arabicName"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="الاسم بالنجليزية حسب الهوية:" textEn="ُEnglish Name according to the ID:" />
+                    <input
+                      type="text"
+                      name="englishName"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="الجنسية:" textEn="Nationality:" />
+                    <select name="nationality" onChange={handleChange} className="input-field">
+                      <option value="">اختر</option>
+                      <option value="Jordanian">أردني</option>
+                      <option value="Other">غير ذلك</option>
+                    </select>
+                  </label>
+                  <label>
+                    <Parag textAr="الجنس:" textEn="Gender:" />
+                    <div className="flex gap-4">
+                      <label>
+                      <Parag textAr="ذكر" textEn="Male" />
+                        <input
+                          type="radio"
+                          name="gender"
+                          value= {language === "ar" ? "ذكر" : "Male"}
+                          onChange={handleChange}
+                        />
+                        <Parag textAr="ذكر" textEn= "Male" />
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="gender"
+                          value= {language === "ar" ? "انثى" : "Male"}
+                          onChange={handleChange}
+                        />
+                        <Parag textAr="انثى" textEn= "Female" />
+                      </label>
+                    </div>
+                  </label>
+                  <label>
+                    <Parag textAr="مكان الميلاد:" textEn="Place of Birth:" />
+                    <input 
+                    type="text" 
+                    name="placeOfBirth" 
+                    onChange={handleChange} 
+                    className="input-field" />
+                  </label>
+                  <label>
+                    <Parag textAr="تاريخ الميلاد:" textEn="Date of Birth:" />
+                    <input
+                      type="date"
+                      name="dateOfBirth"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                </div>
+              </section>
+
+              {/* Document Information */}
+              <section>
+                <SubTitle titleAr={"بيانات الوثيقة"} titleEn={"Document Information"} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <label>
+                    <Parag textAr="نوع الوثيقة:" textEn="Document Type:" />
+                    <select name="documentType" onChange={handleChange} className="input-field">
+                      <option value=""><Parag textAr="اختر" textEn="Choose" /></option>
+                      <option value="1"><Parag textAr="جواز سفر" textEn="Passport" /></option>
+                      <option value="2"><Parag textAr="بطاقة مدنية / عسكرية" textEn="National ID / Military ID" /></option>
+                      <option value="3"><Parag textAr="دفتر عائلة" textEn="Family Card" /></option>
+                      <option value="4"><Parag textAr="بطاقة ابناء اردنيات" textEn="Jordanian Children Card" /></option>
+                      
+                    </select>
+                  </label>
+                  <label>
+                    <Parag textAr="رقم الوثيقة:" textEn="Document Number:" />
+                    <input
+                      type="text"
+                      name="documentNumber"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="الرقم الوطني للأردني:" textEn="Jordanian National ID:" />
+                    <input
+                      type="text"
+                      name="nationalID"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                </div>
+              </section>
+
+              {/* University Information */}
+              <section>
+                <SubTitle titleAr={"بيانات الشهادة الجامعية"} titleEn={"University Information"} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <label>
+                    <Parag textAr="بلد الشهادة:" textEn="Degree Country:" />
+                    <select name="degreeCountry" onChange={handleChange} className="input-field">
+                      <option value="">اختر</option>
+                      <option value="Jordan">الأردن</option>
+                      <option value="Other">غير ذلك</option>
+                    </select>
+                  </label>
+                  <label>
+                    <Parag textAr="اسم الجامعة:" textEn="University Name:" />
+                    <select name="degreeCountry" onChange={handleChange} className="input-field">
+                      <option value="">اختر</option>
+                      <option value="Jordan">الجامعة الأردنية</option>
+                      <option value="Other">الجامعة الهاشمية</option>
+                    </select>
+                  </label>
+                  <label>
+                    <Parag textAr="تاريخ الالتحاق بالجامعة:" textEn="Date of Enrollment:" />
+                    <input
+                      type="date"
+                      name="universityStartDate"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="تاريخ التخرج من الجامعة:" textEn="Graduation Date:" />
+                    <input
+                      type="date"
+                      name="universityEndDate"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="تاريخ الشهادة:" textEn="Degree Date:" />
+                    <input
+                      type="date"
+                      name="degreeDate"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="عدد سنوات الدراسة:" textEn="Years of Study:" />
+                    <input
+                      type="number"
+                      name="yearsOfStudy"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                </div>
+              </section>
+
+              {/* Contact Information */}
+              <section>
+                <SubTitle titleAr={"العناوين"} titleEn={"Contact Information"} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <label>
+                    <Parag textAr="رقم الهاتف الخلوي:" textEn="Mobile Number:" />
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="البريد الإلكتروني:" textEn="Email:" />
+                    <input
+                      type="email"
+                      name="email"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                  <label>
+                    <Parag textAr="عنوان المنزل:" textEn="Home Address:" />
+                    <input
+                      type="text"
+                      name="homeAddress"
+                      onChange={handleChange}
+                      className="input-field"
+                    />
+                  </label>
+                </div>
+              </section>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
+                  ${
+                    language === "ar"
+                  ? "font-semibold text-xl"
+                    : "font-medium text-base"
+                  }`}
+                >
+                {language === "en" ? "Submit" : "ارسال"}
+              </button>
+            </form>
           </div>
-        </section>
-
-        {/* Document Information */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">بيانات الوثيقة</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label>
-              نوع الوثيقة:
-              <select name="documentType" onChange={handleChange} className="input-field">
-                <option value="">يرجى الاختيار</option>
-                <option value="National ID">الرقم الوطني</option>
-                <option value="Passport">جواز السفر</option>
-              </select>
-            </label>
-            <label>
-              رقم الوثيقة:
-              <input
-                type="text"
-                name="documentNumber"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              الرقم الوطني للأردني:
-              <input
-                type="text"
-                name="nationalID"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-          </div>
-        </section>
-
-        {/* University Information */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">بيانات الشهادة الجامعية</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label>
-              بلد الشهادة:
-              <select name="degreeCountry" onChange={handleChange} className="input-field">
-                <option value="">اختر</option>
-                <option value="Jordan">الأردن</option>
-                <option value="Other">غير ذلك</option>
-              </select>
-            </label>
-            <label>
-              اسم الجامعة:
-              <input
-                type="text"
-                name="universityName"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              تاريخ الالتحاق بالجامعة:
-              <input
-                type="date"
-                name="universityStartDate"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              تاريخ التخرج من الجامعة:
-              <input
-                type="date"
-                name="universityEndDate"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              تاريخ الشهادة:
-              <input
-                type="date"
-                name="degreeDate"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              عدد سنوات الدراسة:
-              <input
-                type="number"
-                name="yearsOfStudy"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">العناوين</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label>
-              رقم الهاتف الخلوي:
-              <input
-                type="text"
-                name="phoneNumber"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              البريد الإلكتروني:
-              <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-            <label>
-              عنوان المنزل:
-              <input
-                type="text"
-                name="homeAddress"
-                onChange={handleChange}
-                className="input-field"
-              />
-            </label>
-          </div>
-        </section>
-
-        {/* Captcha */}
-        <section>
-          <label>
-            يرجى إدخال رمز التحقق:
-            <input
-              type="text"
-              name="captcha"
-              onChange={handleChange}
-              className="input-field"
-            />
-          </label>
-        </section>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full"
-        >
-          ارسال
-        </button>
-      </form>
-    </div>
+    </main>
   );
 }
+
+

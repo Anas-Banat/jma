@@ -29,7 +29,6 @@ export default function Home() {
       <Contact />
       <Faq />
       <Location />
-      <ApplicationForm />
     </main>
   );
 }
