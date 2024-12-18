@@ -91,7 +91,6 @@ export default function ApplicationForm() {
                     <Parag textAr="الجنس:" textEn="Gender:" />
                     <div className="flex gap-4">
                       <label>
-                      <Parag textAr="ذكر" textEn="Male" />
                         <input
                           type="radio"
                           name="gender"
