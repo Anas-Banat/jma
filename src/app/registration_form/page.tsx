@@ -56,7 +56,7 @@ export default function ApplicationForm() {
       />
     <div className="container mx-auto lg:py-6 lg:px-40 ">
           
-            <form onSubmit={handleSubmit} className="place-items-center space-y-6 bg-white p-6 rounded-lg shadow-lg">
+            <form onSubmit={handleSubmit} className="w-auto space-y-6 bg-white p-6 rounded-lg shadow-lg">
               {/* Basic Information */}
               <section>
                 <SubTitle titleAr={"البيانات الاساسية"} titleEn={"Basic Information"} />
