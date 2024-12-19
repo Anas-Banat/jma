@@ -1,6 +1,6 @@
 "use client";
 
-import { Parag, SubTitle } from "../../components/Other/Other";
+import { FormParag, Parag, SubTitle } from "../../components/Other/Other";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
@@ -62,7 +62,7 @@ export default function ApplicationForm() {
                 <SubTitle titleAr={"البيانات الاساسية"} titleEn={"Basic Information"} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label>
-                    <Parag textAr="الاسم بالعربية حسب الهوية:" textEn="Arabic Name according to the ID:" />
+                    <FormParag textAr="الاسم بالعربية حسب الهوية:" textEn="Arabic Name according to the ID:" />
                     <input
                       type="text"
                       name="arabicName"
@@ -71,7 +71,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="الاسم بالنجليزية حسب الهوية:" textEn="ُEnglish Name according to the ID:" />
+                    <FormParag textAr="الاسم بالنجليزية حسب الهوية:" textEn="ُEnglish Name according to the ID:" />
                     <input
                       type="text"
                       name="englishName"
@@ -80,7 +80,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="الجنسية:" textEn="Nationality:" />
+                    <FormParag textAr="الجنسية:" textEn="Nationality:" />
                     <select name="nationality" onChange={handleChange} className="input-field">
                       <option value="">اختر</option>
                       <option value="Jordanian">أردني</option>
@@ -88,7 +88,7 @@ export default function ApplicationForm() {
                     </select>
                   </label>
                   <label>
-                    <Parag textAr="الجنس:" textEn="Gender:" />
+                    <FormParag textAr="الجنس:" textEn="Gender:" />
                     <div className="flex gap-4">
                       <label>
                         <input
@@ -97,7 +97,7 @@ export default function ApplicationForm() {
                           value= {language === "ar" ? "ذكر" : "Male"}
                           onChange={handleChange}
                         />
-                        <Parag textAr="ذكر" textEn= "Male" />
+                        <FormParag textAr="ذكر" textEn= "Male" />
                       </label>
                       <label>
                         <input
@@ -106,12 +106,12 @@ export default function ApplicationForm() {
                           value= {language === "ar" ? "انثى" : "Male"}
                           onChange={handleChange}
                         />
-                        <Parag textAr="انثى" textEn= "Female" />
+                        <FormParag textAr="انثى" textEn= "Female" />
                       </label>
                     </div>
                   </label>
                   <label>
-                    <Parag textAr="مكان الميلاد:" textEn="Place of Birth:" />
+                    <FormParag textAr="مكان الميلاد:" textEn="Place of Birth:" />
                     <input 
                     type="text" 
                     name="placeOfBirth" 
@@ -119,7 +119,7 @@ export default function ApplicationForm() {
                     className="input-field" />
                   </label>
                   <label>
-                    <Parag textAr="تاريخ الميلاد:" textEn="Date of Birth:" />
+                    <FormParag textAr="تاريخ الميلاد:" textEn="Date of Birth:" />
                     <input
                       type="date"
                       name="dateOfBirth"
@@ -135,7 +135,7 @@ export default function ApplicationForm() {
                 <SubTitle titleAr={"بيانات الوثيقة"} titleEn={"Document Information"} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label>
-                    <Parag textAr="نوع الوثيقة:" textEn="Document Type:" />
+                    <FormParag textAr="نوع الوثيقة:" textEn="Document Type:" />
                     <select name="documentType" onChange={handleChange} className="input-field">
                       <option value=""><Parag textAr="اختر" textEn="Choose" /></option>
                       <option value="1"><Parag textAr="جواز سفر" textEn="Passport" /></option>
@@ -146,7 +146,7 @@ export default function ApplicationForm() {
                     </select>
                   </label>
                   <label>
-                    <Parag textAr="رقم الوثيقة:" textEn="Document Number:" />
+                    <FormParag textAr="رقم الوثيقة:" textEn="Document Number:" />
                     <input
                       type="text"
                       name="documentNumber"
@@ -155,7 +155,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="الرقم الوطني للأردني:" textEn="Jordanian National ID:" />
+                    <FormParag textAr="الرقم الوطني للأردني:" textEn="Jordanian National ID:" />
                     <input
                       type="text"
                       name="nationalID"
@@ -171,7 +171,7 @@ export default function ApplicationForm() {
                 <SubTitle titleAr={"بيانات الشهادة الجامعية"} titleEn={"University Information"} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label>
-                    <Parag textAr="بلد الشهادة:" textEn="Degree Country:" />
+                    <FormParag textAr="بلد الشهادة:" textEn="Degree Country:" />
                     <select name="degreeCountry" onChange={handleChange} className="input-field">
                       <option value="">اختر</option>
                       <option value="Jordan">الأردن</option>
@@ -179,7 +179,7 @@ export default function ApplicationForm() {
                     </select>
                   </label>
                   <label>
-                    <Parag textAr="اسم الجامعة:" textEn="University Name:" />
+                    <FormParag textAr="اسم الجامعة:" textEn="University Name:" />
                     <select name="degreeCountry" onChange={handleChange} className="input-field">
                       <option value="">اختر</option>
                       <option value="Jordan">الجامعة الأردنية</option>
@@ -187,7 +187,7 @@ export default function ApplicationForm() {
                     </select>
                   </label>
                   <label>
-                    <Parag textAr="تاريخ الالتحاق بالجامعة:" textEn="Date of Enrollment:" />
+                    <FormParag textAr="تاريخ الالتحاق بالجامعة:" textEn="Date of Enrollment:" />
                     <input
                       type="date"
                       name="universityStartDate"
@@ -196,7 +196,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="تاريخ التخرج من الجامعة:" textEn="Graduation Date:" />
+                    <FormParag textAr="تاريخ التخرج من الجامعة:" textEn="Graduation Date:" />
                     <input
                       type="date"
                       name="universityEndDate"
@@ -205,7 +205,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="تاريخ الشهادة:" textEn="Degree Date:" />
+                    <FormParag textAr="تاريخ الشهادة:" textEn="Degree Date:" />
                     <input
                       type="date"
                       name="degreeDate"
@@ -214,7 +214,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="عدد سنوات الدراسة:" textEn="Years of Study:" />
+                    <FormParag textAr="عدد سنوات الدراسة:" textEn="Years of Study:" />
                     <input
                       type="number"
                       name="yearsOfStudy"
@@ -230,7 +230,7 @@ export default function ApplicationForm() {
                 <SubTitle titleAr={"العناوين"} titleEn={"Contact Information"} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label>
-                    <Parag textAr="رقم الهاتف الخلوي:" textEn="Mobile Number:" />
+                    <FormParag textAr="رقم الهاتف الخلوي:" textEn="Mobile Number:" />
                     <input
                       type="text"
                       name="phoneNumber"
@@ -239,7 +239,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="البريد الإلكتروني:" textEn="Email:" />
+                    <FormParag textAr="البريد الإلكتروني:" textEn="Email:" />
                     <input
                       type="email"
                       name="email"
@@ -248,7 +248,7 @@ export default function ApplicationForm() {
                     />
                   </label>
                   <label>
-                    <Parag textAr="عنوان المنزل:" textEn="Home Address:" />
+                    <FormParag textAr="عنوان المنزل:" textEn="Home Address:" />
                     <input
                       type="text"
                       name="homeAddress"

@@ -109,3 +109,24 @@ export const DownloadFile = ({ urlPathAr, urlPathEn, textAr, textEn }: { urlPath
     </>
   );
 };
+
+
+// For Paragraph Details
+export const FormParag = ({ textAr, textEn }: { textAr: string, textEn: string }) => {
+  const { language } = useLanguage();
+
+  return (
+    <>
+    {language === "ar" 
+      ? 
+      <p className="w-full p-2 border rounded mb-5 text-xl text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
+          {textAr}
+        </p>
+      :
+      <p className="w-full p-2 border rounded mb-5 text-base text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
+          {textEn}
+        </p>
+    }
+    </>
+  );
+};
