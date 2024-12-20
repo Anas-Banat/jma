@@ -23,6 +23,6 @@
       "@/components*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Header/logo.jsx", "src/components/Photos_Gallery/Gallery.js", "src/components/Career/jobs.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Header/logo.jsx", "src/components/Photos/Gallery.js", "src/components/Career/jobs.tsx"],
   "exclude": ["node_modules"]
 }

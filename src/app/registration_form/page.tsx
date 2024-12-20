@@ -1,7 +1,7 @@
 "use client";
 
-import { FormParag, Parag, SubTitle } from "../../components/Other/Other";
 import Breadcrumb from "../../components/Common/Breadcrumb";
+import { FormParag, Parag, SubTitle } from "../../components/Other/Other";
 import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
 
@@ -44,7 +44,8 @@ export default function ApplicationForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    alert("Form Submitted Successfully!");
+    <Parag textAr="تم تقديم الطلب بنجاح" textEn="Form Submitted Successfully!"/>
+    alert(language === "ar" ? "تم تقديم الطلب بنجاح!" : "Form Submitted Successfully!");
   };
 
   return (
@@ -260,17 +261,19 @@ export default function ApplicationForm() {
               </section>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
-                  ${
-                    language === "ar"
-                  ? "font-semibold text-xl"
-                    : "font-medium text-base"
-                  }`}
-                >
-                {language === "en" ? "Submit" : "ارسال"}
-              </button>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className={`inline-flex text-center items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
+                    ${
+                      language === "ar"
+                    ? "font-semibold text-xl"
+                      : "font-medium text-base"
+                    }`}
+                  >
+                  {language === "en" ? "Submit" : "ارسال"}
+                </button>
+              </div>
             </form>
           </div>
     </main>

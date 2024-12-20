@@ -9,52 +9,41 @@ import carin from "../../../public/images/blog/blog-03.jpg"
 import commerical from "../../../public/images/blog/blog-03.jpg"
 import Image from 'next/image'
 
-const RoomItem = ({imageSrc, altText, title}) => (
-    <span
-    className='group relative over-hidden'
-    >
-        <div className='group-hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer'>
+const PhotoItem = ({imageSrc, altText}) => (
+    
+        <div className='transition-transform duration-300 ease-in-out cursor-pointer'>
         <Image
         src={imageSrc}
-        className='px-4 py-4 w-full h-full object-cover transform scale-100 group-hover:scale-105' alt={altText}
+        className='px-4 py-4 w-full h-full object-cover transform scale-100 group-hover:scale-105' 
+        alt={altText}
         />
         </div>
-        <div className=' text-black font-medium uppercase text-xl md:text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out'>
-            {title}
-        </div>
-    </span>
 )
 
 const rooms = [
     {
       imageSrc: front,
       altText: 'Room',
-      title: 'Room',
     },
     {
       imageSrc: liveroom,
       altText: 'Livingroom',
-      title: 'LivingRoom',
     },
     {
       imageSrc: cleanKitchen,
       altText: 'CleanKitchen',
-      title: 'CleanKitchen',
     },
     {
         imageSrc: car1,
         altText: 'Car',
-        title: 'Car',
       },
       {
         imageSrc: carin,
         altText: 'Vehicle Interior',
-        title: 'Vehicle Interior',
       },
       {
         imageSrc: commerical,
         altText: 'Commerical',
-        title: 'Commerical',
       },
   ];
 
@@ -69,11 +58,10 @@ const Gallery = () => {
             </div>
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-[8px]'>
                 {rooms.map((room, index) => (
-                    <RoomItem
+                    <PhotoItem
                     key={index}
                     imageSrc={room.imageSrc}
                     altText={room.altText}
-                    title={room.title}
                     />
                 ))}
             </div>

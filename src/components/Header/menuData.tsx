@@ -154,7 +154,7 @@ const menuData: Menu[] = [
           id: 503,
           en_title: "Photos Gallery",
           ar_title: "معرض الصور",
-          path: "/photos_gallery",
+          path: "/photos",
           newTab: false,
         },
       ],

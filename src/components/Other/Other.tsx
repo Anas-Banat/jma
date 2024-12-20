@@ -29,11 +29,11 @@ export const Parag = ({ textAr, textEn }: { textAr: string, textEn: string }) =>
     <>
     {language === "ar" 
       ? 
-      <p className="px-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
+      <p className="px-7 py-2 text-xl leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
           {textAr}
         </p>
       :
-      <p className="px-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
+      <p className="px-7 py-2 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
           {textEn}
         </p>
     }
@@ -49,7 +49,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
     <>
     {language === "ar" 
       ? 
-      <p className="pr-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
+      <p className="py-10 pr-7 mb-5 text-xl leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[20px] sm:leading-[1.2]">
         للمزيد من المعلومات،
         <a 
           href={urlPathAr} 
@@ -61,7 +61,7 @@ export const ClickHere = ({ urlPathAr, urlPathEn }: { urlPathAr: string, urlPath
          لتحميل الملف
       </p>
       :
-      <p className="pl-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
+      <p className="py-10 pl-7 mb-5 text-base leading-relaxed text-blue-950 dark:text-dark-6 sm:text-[15px] sm:leading-[1.2]">
         For more information, please 
         <a 
           href={urlPathEn}

@@ -1,6 +1,6 @@
-import {PostType} from "@/types/post";
+import {ConferencesType} from "@/types/conferences";
 
-export const posts: PostType[] = [
+export const conferences: ConferencesType[] = [
   {
     id: 1,
     titleEn: 'Boost your convPostersion rate',

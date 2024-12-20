@@ -3,5 +3,4 @@ const nextConfig = {}
 
 module.exports = {
   nextConfig,
-  cache: 'memory',
   }

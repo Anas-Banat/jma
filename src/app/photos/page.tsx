@@ -1,6 +1,6 @@
 "use client";
 
-import Gallery from "../../components/Photos_Gallery/Gallery";
+import Photos from "../../components/Photos/photos";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -13,7 +13,7 @@ const GalleryPage = () => {
       <Breadcrumb 
         pageName={language === "ar" ? "معرض الصور" : "Photos Gallery"}
       />
-      <Gallery />
+      <Photos />
     </main>
   );
 };

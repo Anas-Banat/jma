@@ -1,6 +1,6 @@
 "use client";
 
-import Conferences from "../../components/Conferences";
+import Conferences from "../../components/Conferences/conferences";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import { useLanguage } from "@/context/LanguageContext";
 
