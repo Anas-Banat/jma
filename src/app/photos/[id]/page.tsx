@@ -14,7 +14,7 @@ interface PhotoDetailsProps {
 export default function PhotoDetails({ params }: PhotoDetailsProps) {
   const { language } = useLanguage();
   
-  const id = parseInt((params).id);
+  const id = parseInt(params.id);
 
   // Find the post by ID
   const photo = photos.find((item) => item.id === id);
@@ -36,7 +36,7 @@ export default function PhotoDetails({ params }: PhotoDetailsProps) {
             </div>
                 {photos.map((photo) => (
                     <div key={photo.id} className='grid sm:grid-cols-2 lg:grid-cols-3 gap-[8px]'>
-                    {photo.photosUrl && photo.photosUrl.map((image, index) => (
+                    {photo.id === id && photo.photosUrl && photo.photosUrl.map((image, index) => (
                       <Image
                         key={index}
                         src={image}
