@@ -8,11 +8,13 @@ import Breadcrumb from "../../../components/Common/Breadcrumb";
 import { Parag, SubTitle } from "../../../components/Other/Other";
 
 
-interface PostDetailsProps {
-  params: Promise<{ id: string }>;
-}
+// interface PostDetailsProps {
+//   params: Promise<{ id: string }>;
+// }
 
-export default function PostDetails({ params }: PostDetailsProps) {
+//export default function PostDetails({ params }: PostDetailsProps) {
+export default function PostDetails({ params }: any) {
+
   const { language } = useLanguage();
   
   const id = parseInt((params).id);

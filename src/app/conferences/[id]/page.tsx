@@ -8,11 +8,9 @@ import Breadcrumb from "../../../components/Common/Breadcrumb";
 import { Parag, SubTitle } from "../../../components/Other/Other";
 
 
-interface ConferenceDetailsProps {
-  params: Promise<{ id: string }>;
-}
 
-export default function ConferenceDetails({ params }: ConferenceDetailsProps) {
+
+export default function ConferenceDetails({ params }: any) {
   const { language} = useLanguage();
   
   const id = parseInt((params).id);
