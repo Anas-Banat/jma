@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 
 const About_Conferences = () => {
@@ -179,12 +180,12 @@ const About_Conferences = () => {
                 {language === 'ar' ? 'تنظم نقابة الأطباء الأردنية مؤتمرات دورية لتبادل المعرفة وتعزيز التعاون الطبي، متضمنة محاضرات علمية وورش عمل تسلط الضوء على أحدث التطورات في المجال الطبي.' : 'The Jordan Medical Association organizes regular conferences to share knowledge and foster medical collaboration, featuring lectures and workshops on the latest advancements in healthcare.'}
                 </p>
 
-                <a
+                <Link
                   href="/conferences"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
                   {language === 'ar' ? 'اقرا المزيد' : 'Read More'}
-                </a>
+                </Link>
               </div>
             </div>
 
