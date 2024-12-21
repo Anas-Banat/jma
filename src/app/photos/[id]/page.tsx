@@ -7,11 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Breadcrumb from "../../../components/Common/Breadcrumb";
 
 
-interface PhotoDetailsProps {
-  params: Promise<{ id: string }>;
-}
-
-export default function PhotoDetails({ params }: PhotoDetailsProps) {
+export default function PhotoDetails({ params }: any) {
   const { language } = useLanguage();
   
   const id = parseInt(params.id);
