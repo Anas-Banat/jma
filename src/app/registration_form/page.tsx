@@ -143,7 +143,6 @@ export default function ApplicationForm() {
                       <option value="2"><Parag textAr="بطاقة مدنية / عسكرية" textEn="National ID / Military ID" /></option>
                       <option value="3"><Parag textAr="دفتر عائلة" textEn="Family Card" /></option>
                       <option value="4"><Parag textAr="بطاقة ابناء اردنيات" textEn="Jordanian Children Card" /></option>
-                      
                     </select>
                   </label>
                   <label>
@@ -264,7 +263,7 @@ export default function ApplicationForm() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className={`inline-flex text-center items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
+                  className={`inline-flex items-center justify-center rounded-md bg-primary mt-10 px-16 py-3 text-center text-white duration-300 hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20
                     ${
                       language === "ar"
                     ? "font-semibold text-xl"
